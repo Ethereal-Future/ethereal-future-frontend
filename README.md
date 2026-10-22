@@ -1,6 +1,6 @@
-# Ethereal Future Frontend
+# Viridian Frontend
 
-Ethereal Future is an open interface for discovering public-good projects, understanding their milestones, and choosing transparent contribution paths. This repository contains an original, dependency-free browser prototype that can grow into a wallet-connected application.
+Viridian is an open interface for discovering public-good projects, understanding their milestones, and choosing transparent contribution paths. This repository contains an original, dependency-free browser prototype that can grow into a wallet-connected application.
 
 ## Product goals
 
