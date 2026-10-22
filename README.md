@@ -1,21 +1,40 @@
 # Ethereal Future Frontend
 
-An original, lightweight web interface for exploring registered projects, contribution goals, and transparent funding activity. This repository is independently implemented and is not a copy of another project's source code.
+Ethereal Future is an open interface for discovering public-good projects, understanding their milestones, and choosing transparent contribution paths. This repository contains an original, dependency-free browser prototype that can grow into a wallet-connected application.
+
+## Product goals
+
+- **Clarity first:** show purpose, progress, target, and next milestone without requiring a wallet.
+- **Evidence over hype:** surface measurable milestones rather than vague promises.
+- **User-owned actions:** prepare contribution intents while leaving signing and custody to a future wallet adapter.
 
 ## Current implementation
 
-- Accessible project overview cards with progress meters.
-- Client-side filtering by category and contribution status.
-- Wallet-agnostic contribution intent flow that hands off to a future wallet adapter.
-- Responsive, dependency-free starter UI suitable for incremental development.
+- Responsive project discovery page with search, category filtering, and active/completed status filtering.
+- Summary metrics for total projects, active goals, and tracked contribution targets.
+- Project cards with progress bars, supporter counts, milestone completion, category labels, and accessible status text.
+- Detail dialog explaining a project’s milestones and contribution path.
+- Empty-state handling, keyboard-visible focus styles, and semantic progress indicators.
 
-## Development
+## Structure
 
-Open `index.html` directly for the starter UI. The data model and filtering logic live in `src/projects.js`.
+```text
+index.html       Semantic browser shell and project detail dialog
+src/app.js       Rendering, filtering, metrics, and dialog interaction
+src/projects.js  Local project model and selector helpers
+src/styles.css   Responsive visual system and accessibility states
+```
+
+## Roadmap
+
+1. Add a wallet adapter with explicit network and transaction review.
+2. Replace local project data with the backend API.
+3. Add verifiable milestone evidence links and activity history.
+4. Add localization and reduced-motion preferences.
 
 ## Contribution workflow
 
-Work should be linked to an open issue, use a short-lived branch, and target `develop`. See `CONTRIBUTING.md`.
+Open or identify an issue, create a focused branch from `develop`, and submit a pull request back into `develop`. Include screenshots for visual changes and describe accessibility impact. Drips points or funding are determined by the applicable program and maintainers; a merged contribution is not a promise of rewards.
 
 ## License
 
