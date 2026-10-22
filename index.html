@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Explore transparent Ethereal Future projects and contribution goals." />
+    <title>Ethereal Future</title>
+    <link rel="stylesheet" href="src/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <p class="eyebrow">ETHEREAL FUTURE</p>
+        <h1>Build what should exist next.</h1>
+        <p class="lede">Discover open projects, see their progress, and choose where your contribution can make a measurable difference.</p>
+      </header>
+      <section aria-labelledby="projects-heading" class="catalog">
+        <div class="toolbar">
+          <h2 id="projects-heading">Open projects</h2>
+          <label>
+            <span class="sr-only">Filter projects</span>
+            <select id="status-filter">
+              <option value="all">All projects</option>
+              <option value="active">Active goals</option>
+              <option value="complete">Completed goals</option>
+            </select>
+          </label>
+        </div>
+        <div id="project-grid" class="project-grid" aria-live="polite"></div>
+      </section>
+    </main>
+    <script type="module" src="src/app.js"></script>
+  </body>
+</html>
