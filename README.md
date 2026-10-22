@@ -15,10 +15,23 @@ Veridian is an open interface for discovering public-good projects, understandin
 - Project cards with progress bars, supporter counts, milestone completion, category labels, and accessible status text.
 - Detail dialog explaining a project’s milestones and contribution path.
 - Empty-state handling, keyboard-visible focus styles, and semantic progress indicators.
+- A working contribution-intent form that calls the backend when available and falls back to local browser storage in offline demo mode.
+- A dependency-free Node startup server for serving the browser application locally.
+
+## Start locally
+
+```bash
+npm start
+# open http://localhost:4173
+```
+
+The frontend starts with seeded project data immediately. If the backend is running on `http://localhost:3001`, the status indicator changes to `Backend connected` and contribution intents are sent to the API. Without the backend, intents are stored locally so the interaction remains usable during UI work.
 
 ## Structure
 
 ```text
+package.json     Local startup and development commands
+scripts/serve.js Dependency-free static development server
 index.html       Semantic browser shell and project detail dialog
 src/app.js       Rendering, filtering, metrics, and dialog interaction
 src/projects.js  Local project model and selector helpers
